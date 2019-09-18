@@ -1,4 +1,4 @@
-# ding-dong2
+# ts-agi
 node.js lib writed on typescript for Fast AGI (Asterisk Gateway Interface) server 
 
 [Fork of ding-dong](https://github.com/antirek/ding-dong)
@@ -6,7 +6,7 @@ node.js lib writed on typescript for Fast AGI (Asterisk Gateway Interface) serve
 
 ## Install
 ```
-npm install ding-dong2
+npm install ts-agi
 
 ```
 
