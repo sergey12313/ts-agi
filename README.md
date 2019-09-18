@@ -12,7 +12,7 @@ npm install ts-agi
 
 `````javascript
 
-const { Agi } = require('ding-dong2');
+const { Agi } = require('ts-agi');
 
 const agi = new Agi();
 
