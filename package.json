@@ -2,7 +2,7 @@
   "name": "ts-agi",
   "description": "Write AGI-server quickly! (AGI - Asterisk Gateway Interface)",
   "author": "Sergey Razuvaev <sergey12313@gmail.com>",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "main": "lib/agi.js",
   "repository": {
     "type": "git",
