@@ -2,18 +2,25 @@
   "name": "ts-agi",
   "description": "Write AGI-server quickly! (AGI - Asterisk Gateway Interface)",
   "author": "Sergey Razuvaev <sergey12313@gmail.com>",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "main": "lib/agi.js",
   "types": "lib/agi.d.ts",
   "license": "MIT",
-  "files": ["lib/**/*"],
-  "keywords": ["asterisk", "agi", "fastagi", "*"],
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "asterisk",
+    "agi",
+    "fastagi",
+    "*"
+  ],
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "test": "jest --detectOpenHandles --config jestconfig.json ",
-    "prepublishOnly" : "npm test && npm run lint",
-    "preversion" : "npm run lint",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
