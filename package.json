@@ -4,6 +4,10 @@
   "author": "Sergey Razuvaev <sergey12313@gmail.com>",
   "version": "0.0.23",
   "main": "lib/agi.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sergey12313/ts-agi"
+  },
   "types": "lib/agi.d.ts",
   "license": "MIT",
   "files": [
