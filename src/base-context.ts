@@ -79,6 +79,7 @@ export class BaseContext <C extends Duplex> extends EventEmitter{
         } else {
           this.readVariables(this.buffer);
         }
+        break;
       case State.waiting:
         if (!this.buffer.includes('\n')) {
           return;
@@ -96,8 +97,9 @@ export class BaseContext <C extends Duplex> extends EventEmitter{
       const [name, value = ''] = el.split(':');
       this.variables[name.slice(4)] = value.trim();
     });
-    this.emit('variables', this.variables);
     this.state = State.waiting;
+    this.emit('variables', this.variables);
+    
   }
 
   private readResponse(data: string): void {
