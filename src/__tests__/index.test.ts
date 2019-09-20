@@ -1,5 +1,5 @@
 import MemoryStream from 'memorystream';
-import {  Socket, Server } from 'net';
+import {Server,  Socket } from 'net';
 import { Duplex } from 'stream';
 import { Agi } from '../agi';
 import { State as state } from '../base-context';
@@ -13,7 +13,7 @@ function writeVars<T extends Duplex>(stream: T) {
   stream.write('\n\n');
 }
 
-class TestContext extends Context<MemoryStream> {
+class TestContext extends Context{
   public sent: string[] = [];
   public pending: Callback | null = null;
   public send(msg: string, callback: Callback) {

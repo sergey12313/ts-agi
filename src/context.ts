@@ -2,7 +2,7 @@ import { Duplex } from 'stream';
 import { BaseContext } from './base-context';
 import { IResponse, phoneKeys } from './interfaces';
 
-export class Context<C extends Duplex> extends BaseContext<C> {
+export class Context extends BaseContext {
   /**
    *  response.result = "-1" | "0"
    *

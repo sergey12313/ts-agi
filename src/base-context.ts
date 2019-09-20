@@ -3,6 +3,7 @@ import { EventEmitter } from 'events';
 import { Duplex } from 'stream';
 import { Callback, IResponse, IVariables } from './interfaces';
 
+
 const debug = debuger('context');
 
 export enum State {
@@ -13,13 +14,13 @@ const send = (data: string) => `---> ${data}`;
 const received = (data: string) => `<--- ${data}`;
 const error = (data: string) => `!!!!! ${data}`;
 
-export class BaseContext <C extends Duplex> extends EventEmitter{
+export class BaseContext extends EventEmitter{
   public readonly variables: IVariables = {};
   protected state: State = State.init;
   protected buffer: string = '';
   protected pending: null | Callback = null;
 
-  constructor(protected stream: C ) {
+  constructor(protected stream: Duplex ) {
     super();
     this.stream.on('data', data => {
       this.read(data.toString());
